@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  background-color: rgba(25, 30, 36, 0.94);
+  color: #a0b3c6;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  & i {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    color: #4f5f6d;
+  }
+}
+
+.hidden {
+  display: none;
+}

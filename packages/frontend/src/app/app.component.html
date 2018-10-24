@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="content">
+
+
+    <div *ngIf="connected">
+      <div [ngClass]="{'clear-all': true, 'hidden': !(socketData | hasContent)}">
+        <div (click)="clearAll()"><i class="fas fa-times"></i></div>
+      </div>
+
+      <div class="command-top">
+        <button class="button" (click)="mockCommand()">run mock</button>
+        <button class="button" (click)="gitCommand()">checkout git branch</button>
+      </div>
+
+      <div class="command-content">
+        <div class="command-item" *ngFor="let item of socketData | commandPipe">
+          <div class="prompt">
+            {{ item.source }}:
+          </div>
+          <div class="lines-container">
+            <div class="lines">
+              <p *ngFor="let line of item.lines">{{ line }}</p>
+            </div>
+          </div>
+          <div class="status">
+            <div *ngIf="item.status === 'OUT'" class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div *ngIf="item.status === 'ERROR'" class="item-status-error">
+              {{item.status}}
+            </div>
+            <div *ngIf="item.status === 'END'" class="item-status-end">
+               {{item.status}}
+            </div>
+          </div>
+       </div>
+     </div>
+  </div>
+
+  <div *ngIf="!connected" class="full-screen-message connecting">
+    waiting for connection
+  </div>
+
+  <router-outlet></router-outlet>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+    "commands": [
+        {
+            "name": "my super git command",
+            "command": "gitCommand",
+            "fields": [],
+            "payload": {
+                "path": "/Users/adam/projects/react",
+                "branch": "master",
+                "pull": true
+            }
+        },
+        {
+            "name": "my mock command emitter",
+            "command": "anyCommand",
+            "payload": "node /Users/adam/projects/lerna-repo/packages/mockEmiter/index.js"
+        }
+    ]
+}
