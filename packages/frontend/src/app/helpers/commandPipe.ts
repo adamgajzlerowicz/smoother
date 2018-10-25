@@ -16,7 +16,7 @@ const defaultRecord: RecordType = {
   status: MessageType.OUT
 };
 
-@Pipe({ name: 'commandPipe' })
+@Pipe({ name: 'commandResultsPipe' })
 export class CommandPipe implements PipeTransform {
   transform(socketData: SocketDataType): ViewDataType {
     let output = [];

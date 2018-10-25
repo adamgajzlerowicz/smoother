@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CommandPipe } from './helpers/commandPipe';
 import { HasContentPipe } from './helpers/hasContentPipe';
+import { CommandsComponent } from './components/commands/commands.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { HasContentPipe } from './helpers/hasContentPipe';
     CommandPipe,
     HasContentPipe,
     AppComponent,
+    CommandsComponent,
   ],
   imports: [
     BrowserModule,

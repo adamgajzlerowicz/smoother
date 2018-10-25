@@ -1,19 +1,21 @@
 <div class="container">
   <div class="content">
-
-
     <div *ngIf="connected">
       <div [ngClass]="{'clear-all': true, 'hidden': !(socketData | hasContent)}">
         <div (click)="clearAll()"><i class="fas fa-times"></i></div>
       </div>
-
       <div class="command-top">
+        <app-commands
+          [config]="config"
+        >
+        </app-commands>
+
         <button class="button" (click)="mockCommand()">run mock</button>
         <button class="button" (click)="gitCommand()">checkout git branch</button>
       </div>
 
       <div class="command-content">
-        <div class="command-item" *ngFor="let item of socketData | commandPipe">
+        <div class="command-item" *ngFor="let item of socketData | commandResultsPipe">
           <div class="prompt">
             {{ item.source }}:
           </div>
