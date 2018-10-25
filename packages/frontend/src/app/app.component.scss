@@ -48,10 +48,17 @@ ul {
 .clear-all {
   color: rgb(185, 117, 127);
   position: absolute;
-  top: 105px;
-  right: 30px;
+  top: 0;
+  left: 0;
   &:hover {
     cursor: pointer;
+  }
+  & div:first-child  {
+    line-height: 11px;
+    & i {
+      line-height: 0;
+    }
+
   }
 }
 
@@ -90,7 +97,6 @@ ul {
   margin: 10px;
   width: 20px;
   height: 20px;
-  // position: relative;
   text-align: center;
 
   -webkit-animation: sk-rotate 2.0s infinite linear;

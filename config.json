@@ -13,7 +13,7 @@
         {
             "name": "my mock command emitter",
             "command": "anyCommand",
-            "payload": "node /Users/adam/projects/lerna-repo/packages/mockEmiter/index.js"
+            "payload": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
         }
     ]
 }
