@@ -15,5 +15,6 @@
             "command": "anyCommand",
             "payload": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
         }
+
     ]
 }

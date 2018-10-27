@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CommandPipe } from './helpers/commandPipe';
 import { HasContentPipe } from './helpers/hasContentPipe';
 import { CommandsComponent } from './components/commands/commands.component';
+import { GitCommandComponent } from './components/commands/git-command/git-command.component';
+import { AnyCommandComponent } from './components/commands/any-command/any-command.component';
 
 
 @NgModule({
@@ -15,12 +17,15 @@ import { CommandsComponent } from './components/commands/commands.component';
     HasContentPipe,
     AppComponent,
     CommandsComponent,
+    GitCommandComponent,
+    AnyCommandComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [GitCommandComponent, AnyCommandComponent]
 })
 export class AppModule { }

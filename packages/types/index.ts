@@ -34,11 +34,20 @@ enum SocketMessage {
     config = 'CONFIG',
 }
 
+type Command = any;
+
 interface Config {
-  commands: any[]
+  commands: Command[]
 }
 
 export {
-  SocketMessage, Event, Message, CommandName, StreamResult, MessageType, Config
+  SocketMessage,
+  Event,
+  Message,
+  CommandName,
+  StreamResult,
+  MessageType,
+  Config,
+  Command
 }
 

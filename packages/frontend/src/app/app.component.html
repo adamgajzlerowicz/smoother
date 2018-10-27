@@ -5,8 +5,9 @@
         <div (click)="clearAll()"><i class="fas fa-times"></i></div>
       </div>
       <div class="command-top">
+
         <app-commands
-          [config]="config"
+          *ngFor="let command of config.commands" [command]="command"
         >
         </app-commands>
 
@@ -45,6 +46,5 @@
   </div>
 
   <router-outlet></router-outlet>
-
   </div>
 </div>

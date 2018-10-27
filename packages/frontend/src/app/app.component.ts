@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.socketService.onMessage<Config>(SocketMessage.config)
-      .subscribe((config) => this.config = config);
+      .subscribe(config => this.config = config );
 
 
     this.socketService.onMessage<Message>(SocketMessage.message)
