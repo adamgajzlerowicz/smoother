@@ -46,32 +46,32 @@ export class AppComponent implements OnInit {
 
 
 
-  command({ command, name, payload }: { command: CommandName, name: string, payload?: any }): void {
-    this.socketService.send(command, { name, payload });
-  }
+  // command({ command, name, payload }: { command: CommandName, name: string, payload?: any }): void {
+  //   this.socketService.send(command, { name, payload });
+  // }
 
 
-  gitCommand(): void {
-    this.command({
-      command: 'gitCommand',
-      name: 'git command',
-      payload: {
-        path: '/Users/adam/projects/react',
-        branch: 'master',
-        pull: true,
-      },
-    });
-  }
+  // gitCommand(): void {
+  //   this.command({
+  //     command: 'gitCommand',
+  //     name: 'git command',
+  //     payload: {
+  //       path: '/Users/adam/projects/react',
+  //       branch: 'master',
+  //       pull: true,
+  //     }
+  //   });
+  // }
 
-  mockCommand(): void {
-    this.command({
-      command: 'anyCommand',
-      name: 'test command',
-      payload: {
-        command: 'node /Users/adam/projects/lerna-repo/packages/mockEmiter/index.js',
-      },
-    });
-  }
+  // mockCommand(): void {
+  //   this.command({
+  //     command: 'anyCommand',
+  //     name: 'test command',
+  //     payload: {
+  //       command: 'node /Users/adam/projects/lerna-repo/packages/mockEmiter/index.js',
+  //     },
+  //   });
+  // }
 
   clearAll(): void {
     this.socketData = { ...defaultSocketState };

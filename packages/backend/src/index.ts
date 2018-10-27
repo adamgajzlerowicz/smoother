@@ -20,7 +20,7 @@ const main = async () => {
       });
     })
 
-    socket.on('anyCommand', ({ name, payload: { command } })=> {
+    socket.on('anyCommand', ({ name, payload: { command } }) => {
       makeCommand({
         command: anyCommand(command),
         name,

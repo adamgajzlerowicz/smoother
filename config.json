@@ -13,7 +13,9 @@
         {
             "name": "my mock command emitter",
             "command": "anyCommand",
-            "payload": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
+            "payload": {
+                "command": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
+            }
         }
 
     ]
