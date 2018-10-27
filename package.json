@@ -5,9 +5,12 @@
     "start": "lerna run start --stream"
   },
   "bin": {
-     "smoother": "npm start"
+    "smoother": "npm start"
   },
   "devDependencies": {
     "lerna": "^3.4.3"
+  },
+  "dependencies": {
+    "@angular/cli": "^7.0.3"
   }
 }

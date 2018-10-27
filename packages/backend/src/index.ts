@@ -14,19 +14,19 @@ const main = async () => {
     socket.emit(SocketMessage.config, config);
 
     socket.on('gitCommand', ({ name, payload: { path, branch, pull = false } }) => {
-        makeCommand({
-            command: gitCommand('/Users/adam/projects/react', 'master'),
-            name,
-        });
+      makeCommand({
+        command: gitCommand('/Users/adam/projects/react', 'master'),
+        name,
+      });
     })
 
     socket.on('anyCommand', ({ name, payload: { command } })=> {
-       makeCommand({
-           command: anyCommand(command),
-           name,
-       });
+      makeCommand({
+        command: anyCommand(command),
+        name,
+      });
     })
-    });
+  });
 }
 
 main();
