@@ -1,4 +1,4 @@
-import { Event, StreamResult, CommandName, SocketMessage, MessageType } from '../../../types';
+import { StreamResult, CommandName, SocketMessage, MessageType } from '../../../types';
 import { Socket } from '../types';
 // @ts-ignore
 import { spawn, exec } from 'child_process';

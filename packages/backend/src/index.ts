@@ -1,7 +1,7 @@
 import { io } from './socket';
 import { Socket } from './types';
 
-import { lsCommand, gitCommand, anyCommand } from './commands';
+import { gitCommand, anyCommand } from './commands';
 import { makeCommand as getMakeCommand } from './commands/commandService';
 import * as config from '../../../config.json';
 
@@ -15,7 +15,7 @@ const main = async () => {
 
     socket.on('gitCommand', ({ name, payload: { path, branch, pull = false } }) => {
       makeCommand({
-        command: gitCommand('/Users/adam/projects/react', 'master'),
+        command: gitCommand(path, branch, pull),
         name,
       });
     })

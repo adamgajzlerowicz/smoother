@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
     this.socketService.onMessage<Config>(SocketMessage.config)
       .subscribe(config => this.config = config );
 
-
     this.socketService.onMessage<Message>(SocketMessage.message)
        .subscribe((message: Message) => {
          this.socketData = {
@@ -36,8 +35,7 @@ export class AppComponent implements OnInit {
           [message.source]: updateContent(this.socketData, message)
        };
       });
-
-     this.socketService.onEvent(Event.CONNECT).subscribe(() => this.connected = true);
+       this.socketService.onEvent(Event.CONNECT).subscribe(() => this.connected = true);
      this.socketService.onEvent(Event.DISCONNECT).subscribe(() => this.connected = false);
   }
 
