@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SocketService } from './socket.service';
-import { updateData, updateContent } from './helpers';
+import { updateContent } from './helpers';
 
-import { Message, Event, CommandName, SocketMessage, Config } from '../../../types';
+import { Message, Event, SocketMessage, Config } from '../../../types';
 import { SocketDataType } from './types';
-
-
-type State = Message[];
 
 const defaultSocketState = {};
 
@@ -43,35 +40,6 @@ export class AppComponent implements OnInit {
      this.socketService.onEvent(Event.CONNECT).subscribe(() => this.connected = true);
      this.socketService.onEvent(Event.DISCONNECT).subscribe(() => this.connected = false);
   }
-
-
-
-  // command({ command, name, payload }: { command: CommandName, name: string, payload?: any }): void {
-  //   this.socketService.send(command, { name, payload });
-  // }
-
-
-  // gitCommand(): void {
-  //   this.command({
-  //     command: 'gitCommand',
-  //     name: 'git command',
-  //     payload: {
-  //       path: '/Users/adam/projects/react',
-  //       branch: 'master',
-  //       pull: true,
-  //     }
-  //   });
-  // }
-
-  // mockCommand(): void {
-  //   this.command({
-  //     command: 'anyCommand',
-  //     name: 'test command',
-  //     payload: {
-  //       command: 'node /Users/adam/projects/lerna-repo/packages/mockEmiter/index.js',
-  //     },
-  //   });
-  // }
 
   clearAll(): void {
     this.socketData = { ...defaultSocketState };
