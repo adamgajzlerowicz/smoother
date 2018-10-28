@@ -29,18 +29,18 @@ export class AppComponent implements OnInit {
       .subscribe(config => this.config = config );
 
     this.socketService.onMessage<Message>(SocketMessage.message)
-       .subscribe((message: Message) => {
-         this.socketData = {
+      .subscribe((message: Message) => {
+        this.socketData = {
           ...this.socketData,
           [message.source]: updateContent(this.socketData, message)
-       };
-      });
-       this.socketService.onEvent(Event.CONNECT).subscribe(() => this.connected = true);
-     this.socketService.onEvent(Event.DISCONNECT).subscribe(() => this.connected = false);
-  }
+        };
+    });
+      this.socketService.onEvent(Event.CONNECT).subscribe(() => this.connected = true);
+      this.socketService.onEvent(Event.DISCONNECT).subscribe(() => this.connected = false);
+    }
 
-  clearAll(): void {
-    this.socketData = { ...defaultSocketState };
+    clearAll(): void {
+      this.socketData = { ...defaultSocketState };
+    }
   }
-}
 
