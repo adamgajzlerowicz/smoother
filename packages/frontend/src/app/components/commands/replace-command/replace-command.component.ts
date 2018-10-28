@@ -5,11 +5,11 @@ import { SocketService } from 'src/app/socket.service';
 import { Command } from '../../../../../../types';
 
 @Component({
-  selector: 'app-git-command',
-  templateUrl: './git-command.component.html',
-  styleUrls: ['./git-command.component.scss']
+  selector: 'app-replace-command',
+  templateUrl: './replace-command.component.html',
+  styleUrls: ['./replace-command.component.scss']
 })
-export class GitCommandComponent {
+export class ReplaceCommandComponent {
   @Input() command: Command;
 
   constructor( private socketService: SocketService ) { }
@@ -24,3 +24,4 @@ export class GitCommandComponent {
     );
   }
 }
+

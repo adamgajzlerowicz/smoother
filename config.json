@@ -23,6 +23,24 @@
             "payload": {
                 "command": "node /projects/smoother/packages/mockEmiter/index.js"
             }
+        },
+        {
+            "name": "b -> a",
+            "command": "replaceCommand",
+            "payload": {
+                "path": "node /projects/smoother/packages/mockEmiter/index.js",
+                "replacer": "a",
+                "replacee": "b"
+            }
+        },
+        {
+            "name": "a -> b",
+            "command": "replaceCommand",
+            "payload": {
+                "path": "node /projects/smoother/packages/mockEmiter/index.js",
+                "replacer": "a",
+                "replacee": "b"
+            }
         }
 
     ]

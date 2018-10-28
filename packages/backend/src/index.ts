@@ -1,7 +1,7 @@
 import { io } from './socket';
 import { Socket } from './types';
 
-import { gitCommand, anyCommand } from './commands';
+import { gitCommand, anyCommand, replaceCommand } from './commands';
 import { makeCommand as getMakeCommand } from './commands/commandService';
 import * as config from '../../../config.json';
 
@@ -18,14 +18,24 @@ const main = async () => {
         command: gitCommand(path, branch, pull),
         name,
       });
-    })
+    });
 
     socket.on('anyCommand', ({ name, payload: { command } }) => {
       makeCommand({
         command: anyCommand(command),
         name,
       });
-    })
+    });
+
+    // TODO change names to constants
+
+    socket.on('replaceCommand', ({ name, payload: { path, replacer, replacee } }) => {
+      makeCommand({
+        command: replaceCommand(path, replacer, replacee),
+        name,
+      });
+    });
+
   });
 }
 

@@ -1,15 +1,16 @@
 import { Component, Input, AfterViewInit, ViewContainerRef, ComponentFactoryResolver, ViewChild } from '@angular/core';
-import { Maybe } from 'purify-ts/adts/Maybe'
-
 
 import { GitCommandComponent } from './git-command/git-command.component';
 import { AnyCommandComponent } from './any-command/any-command.component';
+import { ReplaceCommandComponent } from './replace-command/replace-command.component';
 
 import { Command } from '../../../../../types';
 
+// TODO: refactor to use constants
 const cases = {
   gitCommand: GitCommandComponent,
   anyCommand: AnyCommandComponent,
+  replaceCommand: ReplaceCommandComponent
 };
 
 @Component({

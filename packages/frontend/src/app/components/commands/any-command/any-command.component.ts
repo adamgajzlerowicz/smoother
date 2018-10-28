@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Command } from '../../../../../../types';
 import { SocketService } from 'src/app/socket.service';
 

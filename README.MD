@@ -21,8 +21,7 @@ Application is easy to extend. Make your own command and make PR to get it added
 * add backend [command](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/backend/src/commands)
 * add socket listener [socket listener](https://github.com/adamgajzlerowicz/smoother/blob/master/packages/backend/src/index.ts)
 * add your command to your custom config file
-* add command [template](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/frontend/src/app/components/commands)
-* add command [template](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/frontend/src/app/components/commands)
+* add command [component](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/frontend/src/app/components/commands) ex (ng g c components/commands/replace-command)
 
 ### TODO
 * add param support to commands

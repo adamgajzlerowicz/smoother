@@ -8,6 +8,7 @@ import { HasContentPipe } from './helpers/hasContentPipe';
 import { CommandsComponent } from './components/commands/commands.component';
 import { GitCommandComponent } from './components/commands/git-command/git-command.component';
 import { AnyCommandComponent } from './components/commands/any-command/any-command.component';
+import { ReplaceCommandComponent } from './components/commands/replace-command/replace-command.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AnyCommandComponent } from './components/commands/any-command/any-comma
     CommandsComponent,
     GitCommandComponent,
     AnyCommandComponent,
+    ReplaceCommandComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,6 @@ import { AnyCommandComponent } from './components/commands/any-command/any-comma
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [GitCommandComponent, AnyCommandComponent]
+  entryComponents: [GitCommandComponent, AnyCommandComponent, ReplaceCommandComponent]
 })
 export class AppModule { }
