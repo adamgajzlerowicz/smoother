@@ -1,7 +1,7 @@
 {
     "commands": [
         {
-            "name": "my super git command",
+            "name": "update react",
             "command": "gitCommand",
             "fields": [],
             "payload": {
@@ -11,14 +11,14 @@
             }
         },
         {
-            "name": "my mock command emitter",
+            "name": "run mock command",
             "command": "anyCommand",
             "payload": {
                 "command": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
             }
         },
         {
-            "name": "dupa",
+            "name": "this will fail",
             "command": "anyCommand",
             "payload": {
                 "command": "node /projects/smoother/packages/mockEmiter/index.js"
