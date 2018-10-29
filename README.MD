@@ -24,6 +24,6 @@ Application is easy to extend. Make your own command and make PR to get it added
 * add command [component](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/frontend/src/app/components/commands) ex (ng g c components/commands/replace-command)
 
 ### TODO
-* add param support to commands
-* add more commands ex: replace file content
-* example config
+* add input and placeholder support to commands
+* add more commands
+* provide example config

@@ -7,6 +7,8 @@ import { makeCommand as getMakeCommand } from './commands/commandService';
 import { Event, SocketMessage } from '../../types';
 
 const main = async (config) => {
+  console.log(config);
+  console.log('dupa');
   io.on(Event.CONNECTION, async function (socket: Socket) {
     const makeCommand = getMakeCommand(socket);
 
@@ -38,6 +40,7 @@ const main = async (config) => {
   });
 }
 
+
 export {
-  main
+  main,
 };

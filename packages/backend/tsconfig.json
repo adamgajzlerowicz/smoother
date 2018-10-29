@@ -1,7 +1,3 @@
 {
-  "compilerOptions": {
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": [ "es2015" ]
-  }
+   "extends": "../../tsconfig"
 }

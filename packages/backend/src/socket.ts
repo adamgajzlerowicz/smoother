@@ -1,5 +1,6 @@
 import { createServer } from 'http';
-// tslint:disable-next-line
+
+
 import * as socketIO from 'socket.io';
 
 const server = createServer()
@@ -11,3 +12,4 @@ export {
     io,
     server
 };
+
