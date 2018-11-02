@@ -62,6 +62,6 @@ describe('validateConfig', () => {
 
     test('removes extra keys', () => {
         const result = validateConfig({ foo: 'bar', commands: [] });
-        expect(result.value).toEqual({ commands: []});
+        expect(result.value).toEqual({ commands: [] });
     })
 })

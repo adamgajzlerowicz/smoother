@@ -1,7 +1,7 @@
 import * as Joi from 'joi'
 
 const schema = {
-  commands: Joi.array().items(
+    commands: Joi.array().items(
         Joi.object().keys({
             name: Joi.string().required(),
             command: Joi.string().required(),
