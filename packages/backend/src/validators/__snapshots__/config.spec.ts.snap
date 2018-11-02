@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validateConfig success 1`] = `
+Object {
+  "commands": Array [
+    Object {
+      "command": "gitCommand",
+      "fields": Array [],
+      "name": "update react",
+      "payload": Object {
+        "branch": "master",
+        "path": "/Users/adam/projects/react",
+        "pull": true,
+      },
+    },
+    Object {
+      "command": "anyCommand",
+      "name": "run mock command",
+      "payload": Object {
+        "command": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js",
+      },
+    },
+    Object {
+      "command": "anyCommand",
+      "name": "this will fail",
+      "payload": Object {
+        "command": "node /projects/smoother/packages/mockEmiter/index.js",
+      },
+    },
+    Object {
+      "command": "replaceCommand",
+      "name": "b -> a",
+      "payload": Object {
+        "path": "node /projects/smoother/packages/mockEmiter/index.js",
+        "replacee": "b",
+        "replacer": "a",
+      },
+    },
+    Object {
+      "command": "replaceCommand",
+      "name": "a -> b",
+      "payload": Object {
+        "path": "node /projects/smoother/packages/mockEmiter/index.js",
+        "replacee": "b",
+        "replacer": "a",
+      },
+    },
+  ],
+}
+`;

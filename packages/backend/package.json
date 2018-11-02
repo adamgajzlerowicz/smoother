@@ -13,18 +13,19 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^23.3.8",
+    "@types/joi": "^14.0.0",
+    "@types/node": "^10.12.0",
+    "@types/redis": "^2.8.7",
+    "@types/sanctuary": "^0.14.2",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4",
     "redis": "^2.8.0",
     "socket.io": "^2.1.1",
-    "ts-jest": "^23.10.4",
-    "@types/node": "^10.12.0",
-    "@types/redis": "^2.8.7",
-    "@types/sanctuary": "^0.14.2"
+    "ts-jest": "^23.10.4"
   },
   "dependencies": {
     "express": "^4.16.4",
-    "joy": "^0.1.1",
+    "joi": "^14.0.3",
     "sanctuary": "^0.15.0",
     "shell-exec": "^1.0.2",
     "ts-node": "^7.0.1",

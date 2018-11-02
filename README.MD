@@ -22,6 +22,7 @@ Application is easy to extend. Make your own command and make PR to get it added
 * add socket listener [socket listener](https://github.com/adamgajzlerowicz/smoother/blob/master/packages/backend/src/index.ts)
 * add your command to your custom config file
 * add command [component](https://github.com/adamgajzlerowicz/smoother/tree/master/packages/frontend/src/app/components/commands) ex (ng g c components/commands/replace-command)
+* allow config shape in validation schema
 
 ### TODO
 * add input and placeholder support to commands

@@ -48,10 +48,20 @@ const successConfig = {
     ]
 };
 
-test('validateConfigSuccess', () => {
-  expect(validateConfig(successConfig)).toBe(true);
-});
+describe('validateConfig', () => {
+    test('success', () => {
+        const result = validateConfig(successConfig);
+        expect(result.value).toMatchSnapshot();
+        expect(result.error).toBeFalsy();
+    });
 
-test('validateConfig fails', () => {
-   expect(() => validateConfig({ })).toThrow(new Error('commands missing'));
+    test('fails for missing commands key', () => {
+        const result = validateConfig({});
+        expect(result.error).toBeDefined();
+    })
+
+    test('removes extra keys', () => {
+        const result = validateConfig({ foo: 'bar', commands: [] });
+        expect(result.value).toEqual({ commands: []});
+    })
 })
