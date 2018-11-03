@@ -21,7 +21,7 @@ const cases = {
 export class CommandsComponent implements AfterViewInit {
   @Input() command: Command;
 
-  @ViewChild("placeholder", {read: ViewContainerRef}) placeholderRef: ViewContainerRef;
+  @ViewChild('placeholder', {read: ViewContainerRef}) placeholderRef: ViewContainerRef;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver) {
@@ -33,7 +33,7 @@ export class CommandsComponent implements AfterViewInit {
 
   private loadItem(component) {
     if (!component) {
-      throw new Error("missing command");
+      throw new Error('missing command');
     }
 
     const factory = this.componentFactoryResolver.resolveComponentFactory(component);

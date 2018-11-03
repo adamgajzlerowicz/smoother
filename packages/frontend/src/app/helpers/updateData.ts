@@ -8,13 +8,6 @@ const updateData = (socketData) => Object
     })
     ).filter(item => !!item.content);
 
-const updateContent = (state, message) =>
-    state[message.source]
-        ? [...state[message.source], message]
-        : state[message.source] = [message];
-
-
 export {
     updateData,
-    updateContent,
 };

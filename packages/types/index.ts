@@ -1,6 +1,9 @@
-import * as commands from '../backend/src/commands';
 
-type CommandName = keyof typeof commands;
+enum CommandName {
+  replaceCommand = 'replaceCommand',
+  gitCommand = 'gitCommand',
+  anyCommand = 'anyCommand'
+}
 
 enum MessageType {
     OUT = 'OUT',
@@ -16,7 +19,7 @@ enum StreamResult {
 
 interface Message {
   content: string,
-  source: CommandName
+  source: CommandName,
   type: MessageType
 };
 

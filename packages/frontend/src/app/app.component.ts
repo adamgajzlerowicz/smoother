@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
 
 import { SocketService } from './socket.service';
-import { updateContent } from './helpers';
+import { updateContent } from './helpers/updateContent';
 
 import { Message, Event, SocketMessage, Config } from '../../../types';
 import { SocketDataType } from './types';
