@@ -32,10 +32,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
         this.socketService.onMessage<Message>(SocketMessage.message)
             .subscribe((message: Message) => {
-                this.socketData = {
-                    ...this.socketData,
-                    [message.source]: updateContent(this.socketData, message)
-                };
+                this.socketData = updateContent(this.socketData, message);
                 this.scrollToBottom();
 
             });

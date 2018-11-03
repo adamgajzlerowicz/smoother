@@ -2,16 +2,19 @@ import { updateContent } from './updateContent';
 import { MessageType, CommandName } from './../../../../types';
 
 describe('updateContent', () => {
-
     it('runs for single element', () => {
-        const state = {};
+        const state = {
+
+        };
         const message = {
             content: 'blah',
             source: CommandName.anyCommand,
             type: MessageType.OUT
         };
 
-        expect(updateContent(state, message)).toEqual([message]);
+        expect(updateContent(state, message)).toEqual({
+            [CommandName.anyCommand]: [message]
+        });
     });
 
     it('runs for multiple elements', () => {
@@ -20,6 +23,7 @@ describe('updateContent', () => {
             source: CommandName.anyCommand,
             type: MessageType.OUT
         };
+
         const state = {
             [CommandName.anyCommand]: [message_1]
         };
@@ -31,9 +35,9 @@ describe('updateContent', () => {
         };
 
         expect(updateContent(state, message_2)).toEqual(
-            [message_1, message_2]
+            {
+                [CommandName.anyCommand]: [message_1, message_2]
+            }
         );
     });
-
-
 });

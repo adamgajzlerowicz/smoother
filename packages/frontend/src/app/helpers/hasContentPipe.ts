@@ -1,4 +1,4 @@
-import { Component, OnInit, PipeTransform, Pipe } from '@angular/core';
+import { PipeTransform, Pipe } from '@angular/core';
 import { SocketDataType } from '../types';
 
 @Pipe({
