@@ -1,8 +1,20 @@
-
+import chalk from 'chalk';
 import { main } from './main';
 import { validateConfig } from './validators/config';
 
-import * as config from '../../../config.json';
+import * as defaultConfig from '../../../config.json';
 
-validateConfig(config) && main(config)
+const config = process.argv[2];
 
+const validated = validateConfig(config || defaultConfig);
+
+console.log('\x1Bc');
+
+if (validated.error) {
+    console.log(chalk.red('Incorrect config. Here are the details'));
+    console.log();
+    console.log((validated.error.details));
+} else {
+    console.log(chalk.green('Application started'));
+    main(validated.value);
+}

@@ -24,6 +24,7 @@
     "ts-jest": "^23.10.4"
   },
   "dependencies": {
+    "chalk": "^2.4.1",
     "express": "^4.16.4",
     "joi": "^14.0.3",
     "sanctuary": "^0.15.0",

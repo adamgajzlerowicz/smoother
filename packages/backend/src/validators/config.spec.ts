@@ -44,7 +44,6 @@ const successConfig = {
                 "replacee": "b"
             }
         }
-
     ]
 };
 
