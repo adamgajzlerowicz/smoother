@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "lerna run start --stream"
+    "clear": "node ./packages/utils/clear.js",
+    "start": "npm run clear; lerna run start --stream"
   },
   "bin": {
     "smoother": "npm start"

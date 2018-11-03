@@ -11,10 +11,17 @@
             }
         },
         {
-            "name": "run mock command",
+            "name": "run mock some command",
             "command": "anyCommand",
             "payload": {
-                "command": "node /Users/adam/projects/smoother/packages/mockEmiter/index.js"
+                "command": "node /Users/adam/projects/smoother/packages/mockEmiter/some.js"
+            }
+        },
+        {
+            "name": "run mock lots command",
+            "command": "anyCommand",
+            "payload": {
+                "command": "node /Users/adam/projects/smoother/packages/mockEmiter/lots.js"
             }
         },
         {

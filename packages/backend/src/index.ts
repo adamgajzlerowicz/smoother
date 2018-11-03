@@ -8,7 +8,6 @@ const config = process.argv[2];
 
 const validated = validateConfig(config || defaultConfig);
 
-console.log('\x1Bc');
 
 if (validated.error) {
     console.log(chalk.red('Incorrect config. Here are the details'));

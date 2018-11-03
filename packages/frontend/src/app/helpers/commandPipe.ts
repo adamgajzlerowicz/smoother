@@ -24,7 +24,7 @@ export class CommandPipe implements PipeTransform {
       const formatted = socketData[command].reduce((aggr, item) => {
           return Object.assign({}, item, {
             source: item.source,
-            lines: [item.content, ...aggr.lines],
+            lines: [...aggr.lines, item.content],
             status: item.type
           });
       }, defaultRecord);

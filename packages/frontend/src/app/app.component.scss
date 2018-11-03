@@ -15,6 +15,7 @@ ul {
       flex: 1;
       display: flex;
       flex-direction: column;
+      min-height: 50px;
   }
   & .prompt {
     text-transform: uppercase;
@@ -40,7 +41,6 @@ ul {
     & i {
       line-height: 0;
     }
-
   }
 }
 
@@ -51,21 +51,22 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.lines {
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+   max-height: calc(100vh - 160px);;
+   & p {
+     // flex: 1 1 auto;
+   }
+ }
 
-.lines-container {
-  display: block;
-  overflow: scroll;
-  & .lines {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column-reverse;
-    overflow-y: scroll;
-    height: 200px;
-    & p {
-      // flex: 1 1 auto;
-    }
-  }
-}
+
+// .lines-container {
+//   display: block;
+//   overflow: scroll;
+// }
 
 .item-status-error {
   color: #b9757f;

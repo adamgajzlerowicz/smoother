@@ -15,26 +15,26 @@
 
       <div class="command-content">
         <div class="command-item" *ngFor="let item of socketData | commandResultsPipe">
-          <div class="prompt">
-            {{ item.source }}:
-          </div>
-          <div class="lines-container">
-            <div class="lines">
+
+            <div class="prompt">
+              {{ item.source }}:
+            </div>
+            <div #scrolling class="lines">
               <p *ngFor="let line of item.lines">{{ line }}</p>
             </div>
+            <div class="status">
+              <div *ngIf="item.status === 'OUT'" class="spinner">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+              </div>
+              <div *ngIf="item.status === 'ERROR'" class="item-status-error">
+                {{item.status}}
+              </div>
+              <div *ngIf="item.status === 'END'" class="item-status-end">
+                 {{item.status}}
+              </div>
           </div>
-          <div class="status">
-            <div *ngIf="item.status === 'OUT'" class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
-            <div *ngIf="item.status === 'ERROR'" class="item-status-error">
-              {{item.status}}
-            </div>
-            <div *ngIf="item.status === 'END'" class="item-status-end">
-               {{item.status}}
-            </div>
-          </div>
+
        </div>
      </div>
   </div>
