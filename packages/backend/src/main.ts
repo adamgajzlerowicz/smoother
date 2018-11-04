@@ -4,7 +4,7 @@ import { Socket } from './types';
 import { gitCommand, anyCommand, replaceCommand } from './commands';
 import { makeCommand as getMakeCommand } from './commands/commandService';
 
-import { Event, SocketMessage } from '../../types';
+import { Event, SocketMessage, CommandName } from '../../types';
 
 const main = async (config) => {
     io.on(Event.CONNECTION, async function(socket: Socket) {
@@ -12,23 +12,21 @@ const main = async (config) => {
 
         socket.emit(SocketMessage.config, config);
 
-        socket.on('gitCommand', ({ name, payload: { path, branch, pull = false } }) => {
+        socket.on(CommandName.gitCommand, ({ name, payload: { path, branch, pull = false } }) => {
             makeCommand({
                 command: gitCommand(path, branch, pull),
                 name,
             });
         });
 
-        socket.on('anyCommand', ({ name, payload: { command } }) => {
+        socket.on(CommandName.anyCommand, ({ name, payload: { command } }) => {
             makeCommand({
                 command: anyCommand(command),
                 name,
             });
         });
 
-        // TODO: refactor to use constants
-
-        socket.on('replaceCommand', ({ name, payload: { path, replacer, replacee } }) => {
+        socket.on(CommandName.replaceCommand, ({ name, payload: { path, replacer, replacee } }) => {
             makeCommand({
                 command: replaceCommand(path, replacer, replacee),
                 name,
